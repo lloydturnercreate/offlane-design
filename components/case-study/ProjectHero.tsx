@@ -96,7 +96,7 @@ export default function ProjectHero({ client, tagline, heroImage, heroVideo, her
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] as any }}
           >
             {/* Hero logo - mobile (above title) */}
             {heroLogo && (

@@ -21,7 +21,7 @@ export default function Footer({ className = "" }: { className?: string }) {
         ref={ref}
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
         className="max-container"
       >
         {/* Main CTA */}
@@ -38,7 +38,7 @@ export default function Footer({ className = "" }: { className?: string }) {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] as any }}
             className="text-display font-medium text-cream mb-8"
           >
             Let's Build.

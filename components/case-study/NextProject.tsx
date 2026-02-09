@@ -25,7 +25,7 @@ export default function NextProject({ currentSlug }: NextProjectProps) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
           className="mb-8"
         >
           <span className="label-mono block">Next Project</span>
@@ -35,7 +35,7 @@ export default function NextProject({ currentSlug }: NextProjectProps) {
           <motion.article
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] as any }}
             className="group cursor-pointer border border-border hover:border-accent/50 transition-colors duration-500 overflow-hidden"
           >
             <div className="grid lg:grid-cols-2 gap-0">

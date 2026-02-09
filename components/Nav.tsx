@@ -43,7 +43,7 @@ export default function Nav() {
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: isLoaded ? 0 : -100, opacity: isLoaded ? 1 : 0 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-cream/90 backdrop-blur-md border-b border-border"
@@ -96,7 +96,7 @@ export default function Nav() {
             height: isMobileMenuOpen ? "auto" : 0,
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
-          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as any }}
           className="md:hidden overflow-hidden"
         >
           <div className="py-6 flex flex-col gap-6">

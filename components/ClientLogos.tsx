@@ -29,9 +29,15 @@ export default function ClientLogos() {
         }
         
         .scroll-container {
-          animation: scroll 30s linear infinite;
+          animation: scroll 50s linear infinite;
           display: flex;
           width: fit-content;
+        }
+        
+        @media (min-width: 768px) {
+          .scroll-container {
+            animation: scroll 30s linear infinite;
+          }
         }
         
         .scroll-container:hover {
@@ -55,8 +61,7 @@ export default function ClientLogos() {
             {clients.map((client, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center"
-                style={{ width: '240px' }}
+                className="flex-shrink-0 flex items-center justify-center w-[160px] md:w-[240px]"
               >
                 <Image
                   src={client.logo}
@@ -65,8 +70,8 @@ export default function ClientLogos() {
                   height={80}
                   className={`w-auto object-contain opacity-60 ${
                     client.name === 'Amazon' 
-                      ? 'h-10 md:h-12 lg:h-14' 
-                      : 'h-14 md:h-16 lg:h-20'
+                      ? 'h-12 md:h-12 lg:h-14' 
+                      : 'h-16 md:h-16 lg:h-20'
                   }`}
                 />
               </div>
@@ -77,8 +82,7 @@ export default function ClientLogos() {
             {clients.map((client, index) => (
               <div
                 key={`dup-${index}`}
-                className="flex-shrink-0 flex items-center justify-center"
-                style={{ width: '240px' }}
+                className="flex-shrink-0 flex items-center justify-center w-[160px] md:w-[240px]"
               >
                 <Image
                   src={client.logo}

@@ -14,6 +14,19 @@ export default function PageLoader({ children }: PageLoaderProps) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // Check if loader has already been shown in this session
+    const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
+
+    if (hasSeenLoader) {
+      // Skip the loader animation
+      setIsLoading(false);
+      setIsLoaded(true);
+      return;
+    }
+
+    // Mark that the loader has been shown
+    sessionStorage.setItem("hasSeenLoader", "true");
+
     // Simulate loading progress
     const timer = setInterval(() => {
       setProgress((prev) => {
@@ -61,7 +74,7 @@ export default function PageLoader({ children }: PageLoaderProps) {
               className="mb-12"
             >
               <span className="text-stark font-medium text-xl tracking-tight">
-                Offlane.Design
+                Offlane
               </span>
             </motion.div>
 

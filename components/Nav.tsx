@@ -61,7 +61,7 @@ export default function Nav() {
             }}
             className="text-stark font-medium text-lg tracking-tight hover:text-accent transition-colors duration-300"
           >
-            Offlane.Design
+            Offlane
           </a>
 
           {/* Desktop Navigation */}
